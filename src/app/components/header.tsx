@@ -9,10 +9,10 @@ function Header() {
                       <Link href="/">Home</Link>
                     </li>
                     <li className="text-2xl px-10 border-2 border-zinc-100 mx-0.5 rounded">
-                      <Link href="./pages/profile">Profile</Link>
+                      <Link href="/profile">Profile</Link>
                     </li>
                     <li className="text-2xl px-10 border-2 border-zinc-100 mx-0.5 rounded">
-                      <Link href="./portfolio">Portfolio</Link>
+                      <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li className="text-2xl px-10 border-2 border-zinc-100 mx-0.5 rounded">Blog</li>
                     <li className="text-2xl px-10 border-2 border-zinc-100 mx-0.5 rounded">SNS</li>

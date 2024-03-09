@@ -12,10 +12,11 @@ function Clock() {
             setTime(currentTime);
         }, 1000);
     }, []);
+
     return(
-        <>
+        <div className="transition-opacity duration-1000">
             {time}
-        </>
+        </div>
     );
 };
 
