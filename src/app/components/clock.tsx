@@ -1,25 +1,26 @@
+/* Hydration対策 */
 "use client"
 
 import { useState, useEffect } from "react";
 
+/* 時計の基礎コンポーネント */
 function Clock() {
     const [time, setTime] = useState("")
     useEffect(() => {
         setInterval(() => {
-            let currentTime = timeUpdater();
+            let currentTime = oneDay_timeUpdater();
             setTime(currentTime);
         }, 1000);
     }, []);
     return(
         <>
-            <div className="flex">
-                <p className="flex bg-zinc-100 text-zinc-950 rounded text-xl w-60 h-16 p-2 m-2 justify-center items-center">{time}</p>
-            </div>
+            {time}
         </>
     );
 };
 
-function timeUpdater() {
+/* 関数-年月日時間の全て */
+function full_timeUpdater() {
     let time = new Date();
     let year = time.getFullYear();
     let month = time.getMonth() + 1;
@@ -33,6 +34,17 @@ function timeUpdater() {
     }
 }
 
+/* 関数-時間のみ */
+function oneDay_timeUpdater() {
+    let time = new Date();
+    let hour = time.getHours();
+    let minite = time.getMinutes();
+    if (minite < 10) {
+        return  hour  + "：0" + minite;
+    } else {
+        return  hour  + "：" + minite;
+    }
+}
 
 
 export default Clock;
