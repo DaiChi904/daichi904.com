@@ -1,33 +1,43 @@
+"use client"
+
+import { useState, useRef } from "react"
 import Image from "next/image";
 import Link from "next/link";
 import Clock from "./components/clock";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import ExpHeader from "./components/ExpHeader";
 
 function Home () {
+  const [changeAppStatus, setChangeAppStatus] = useState(false)
+  setTimeout(() => {
+    setChangeAppStatus(true);
+  }, 500);
     return(
         <>
           <div className="flex flex-col h-screen items-center justify-between">
             <div className="flex">
-              <Header />
+              <ExpHeader />
             </div>
+            <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
             <main>
-              <h1 className="text-8xl flex items-center justify-center h-48">DaiChi</h1>
+              <h1 className="text-8xl flex items-center justify-center h-48 mt-24">DaiChi</h1>
               <div className="text-4xl flex items-center justify-center h-16">
                 <Clock />
               </div>
               {/* ナビゲーションここから */}
-              <div className="flex w-auto h-48 items-center justify-center">
-                <ul className="flex justify-center">
-                  <li className="text-xl px-10 border-y-4 border-zinc-100 mx-2 rounded">
-                    <Link href="/profile">About Me</Link>
+              <div className="flex h-32 justify-center items-center">
+                <ul>
+                  <li className="text-2xl border-zinc-100 border-y-4 mx-2 rounded text-center">
+                    <Link className="block w-full h-full px-5 hover:bg-purple-600 hover:opacity-95" href="/profile">About Me</Link>
                   </li>
                 </ul>
               </div>
               {/* ナビゲーションここまで */}
             </main>
-            <div className="mb-3">
+            <div className="flex grow items-end mb-3">
               <Footer />
+            </div>
             </div>
           </div>  
         </>

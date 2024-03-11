@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef} from "react"
 import Link from "next/link"
 
 function Header() {

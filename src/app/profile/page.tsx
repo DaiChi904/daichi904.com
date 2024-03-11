@@ -1,14 +1,25 @@
+"use client"
+import { useState } from "react";
+
 import Footer from "../components/footer";
 import Header from "../components/header";
 import MyIcon from "../components/myIcon";
 
 function Profile() {
+    const [changeAppStatus, setChangeAppStatus] = useState(false)
+    setTimeout(() => {
+    setChangeAppStatus(true);
+    }, 500); /* 2秒後にchangeAppStatusをtrueに変更 */
+
     return (
         <>
             {/* 全体の定義 */}
             <div className="flex flex-col h-screen">
-                <Header />
+                <div className="flex items-start">
+                    <Header />
+                </div>
                 {/* メイン画面の定義 */}
+                <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
                 <main className="flex justify-center">
                 <div className="flex flex-col w-11/12">
                 {/* メイン画面の定義 */}
@@ -57,6 +68,7 @@ function Profile() {
                 {/* メイン画面の定義終わり */}
                 <div className="flex items-end justify-center grow mb-3">
                     <Footer />
+                </div>
                 </div>
             </div>
             {/* 全体の定義終わり */}
