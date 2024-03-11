@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 
 /* 時計の基礎コンポーネント */
 function Clock() {
-    const [time, setTime] = useState("")
+    const [time, setTime] = useState("");
     useEffect(() => {
+        let currentTime = oneDay_timeUpdater();
+        setTime(currentTime); /* 1回目のレンダリング */
         setInterval(() => {
-            let currentTime = oneDay_timeUpdater();
+            currentTime = oneDay_timeUpdater();
             setTime(currentTime);
         }, 1000);
     }, []);

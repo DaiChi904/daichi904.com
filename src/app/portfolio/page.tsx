@@ -20,13 +20,12 @@ function Portfolio() {
                     <main className="flex grow justify-center items-center">
                         <h1 className="text-4xl">無いです。</h1>
                     </main>
-                    <div className="flex items-end h-fit mb-3">
-                        <Footer />
-                    </div>
+                </div>
+                <div className="flex grow justify-center items-end h-fit mb-3">
+                    <Footer />
                 </div>
             </div>
         </>
-        
     );
 }
 

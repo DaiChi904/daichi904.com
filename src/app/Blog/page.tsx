@@ -20,9 +20,9 @@ function Blog() {
                     <main className="flex grow justify-center items-center">
                         <h1 className="text-4xl">んーこれからに期待（笑）</h1>
                     </main>
-                    <div className="flex items-end h-fit mb-3">
-                        <Footer />
                     </div>
+                    <div className="flex grow justify-center items-end mb-3">
+                        <Footer />
                 </div>
             </div>
         </>
