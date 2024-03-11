@@ -26,7 +26,9 @@ function Profile() {
                         <div className="flex flex-row">
                             {/* 左側の要素 */}
                             <div className="flex flex-col my-3 border-2 rounded-lg">
-                                <MyIcon />
+                                <div className="w-max h-max">
+                                    <MyIcon />
+                                </div>
                                 <table className="table-auto my-2">
                                     <thead>
                                         <tr>
@@ -52,7 +54,7 @@ function Profile() {
                                 <h1 className="text-3xl">ひとこと</h1>
                                 <p className="text-lg">広島出身で、地方の国立大学に通うしがない大学生です。情報系の勉強をしています。</p>
                                 <p className="text-lg">最近はプログラミングの勉強を始めて、今はReactとかNext.jsとかをこねこねしています。</p>
-                                <p className="text-lg">趣味はゲームや音楽を聴くことで、最近は料理にはまっています。下に自分の好きな音楽をいくつか載せておきます。</p>
+                                <p className="text-lg">趣味はゲームや音楽を聴くことで、最近は料理にはまっています。下に自分の好きな音楽をいくつか載せておきます。特に、「ただ、透明」は個人的に一番好きな歌です。是非聴いてみてください。</p>
 
                                 <ol className="m-5">
                                     <li>ユノギシロ - ただ、透明</li>

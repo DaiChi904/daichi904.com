@@ -18,7 +18,7 @@ function Portfolio() {
                 </div>
                 <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
                     <main className="flex grow justify-center items-center">
-                        <h1 className="text-4xl">無いです。</h1>
+                        <h1 className="text-4xl">んーこれからに期待（笑）</h1>
                     </main>
                 </div>
                 <div className="flex grow justify-center items-end h-fit mb-3">
