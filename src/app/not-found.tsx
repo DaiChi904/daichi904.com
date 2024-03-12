@@ -18,7 +18,7 @@ function Custom404() {
                 </div>
                 <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
                     <main className="flex grow justify-center items-center">
-                        <h1 className="text-4xl">内容が無いようです...</h1>
+                        <h1 className="text-4xl">404 Error - 内容が無いようです...</h1>
                     </main>
                 </div>
                 <div className="flex grow justify-center items-end mb-3">
