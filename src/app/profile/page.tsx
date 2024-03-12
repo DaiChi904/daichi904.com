@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
+import Link from "next/link";
 
-import Footer from "../components/footer";
-import Header from "../components/header";
-import MyIcon from "../components/myIcon";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+import MyIcon from "../../components/myIcon";
 
 function Profile() {
     const [changeAppStatus, setChangeAppStatus] = useState(false)
@@ -23,7 +24,9 @@ function Profile() {
                 <main className="flex justify-center">
                     <div className="flex flex-col w-11/12">
                     {/* メイン画面の定義 */}
-                        <div className="flex flex-row">
+                        <div className="flex flex-col">
+                            {/* 上側の要素 */}
+                            <div className="flex flex-row">
                             {/* 左側の要素 */}
                             <div className="flex flex-col my-3 border-2 rounded-lg">
                                 <div className="w-max h-max">
@@ -63,6 +66,25 @@ function Profile() {
                                 </ol>
                             </div>
                             {/* 右側の要素終わり */}
+                            </div>
+                            {/* 上側の要素終わり */}
+                            {/* 下側の要素 */}
+                            <div className="flex flex-row justify-center items-center">
+                                {/* 左側の要素 */}
+                                <div className="flex justify-center items-center">
+
+                                </div>
+                                {/* 左側の要素 */}
+                                {/* 右側の要素 */}
+                                <div className="flex justify-center items-center">
+                                    <ul>
+                                        <li className="text-2xl border-zinc-100 border-y-4 mx-2 rounded text-center">
+                                            <Link className="block w-full h-full px-5 hover:bg-purple-600 hover:opacity-95" href="/profile/gyagu">ギャグ</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* 右側の要素 */}
+                            </div>
                         </div>
                     {/* メイン画面の定義終わり */}
                     </div>

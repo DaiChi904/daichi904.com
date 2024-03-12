@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
 
 function Portfolio() {
     const [changeAppStatus, setChangeAppStatus] = useState(false)

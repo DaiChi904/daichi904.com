@@ -1,10 +1,10 @@
 "use client"
 import { useState } from "react";
 
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
 
-function SNSContact() {
+function Contact() {
     const [changeAppStatus, setChangeAppStatus] = useState(false)
     setTimeout(() => {
         setChangeAppStatus(true);
@@ -29,4 +29,4 @@ function SNSContact() {
     );
 }
 
-export default SNSContact;
+export default Contact;

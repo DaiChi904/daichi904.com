@@ -1,14 +1,16 @@
 "use client"
 import { useState } from "react";
 
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
 
 function Blog() {
     const [changeAppStatus, setChangeAppStatus] = useState(false)
     setTimeout(() => {
     setChangeAppStatus(true);
     }, 500); /* 2秒後にchangeAppStatusをtrueに変更 */
+
+    
 
     return(
         <>

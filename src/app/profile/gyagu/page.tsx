@@ -1,0 +1,54 @@
+"use client"
+import { useState } from "react";
+
+import Footer from "../../../components/footer";
+import Header from "../../../components/header";
+
+function Portfolio() {
+    const [changeAppStatus, setChangeAppStatus] = useState(false)
+    setTimeout(() => {
+    setChangeAppStatus(true);
+    }, 500); /* 2秒後にchangeAppStatusをtrueに変更 */
+
+    return(
+        <>
+            <div className="flex flex-col h-screen items-center">
+                <div className="flex items-start">
+                    <Header />
+                </div>
+                <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
+                    <main className="flex flex-col grow">
+                        <div className="flex justify-center">
+                            <h1 className="text-4xl my-2">ギャグ一覧</h1>
+                        </div>
+                            <ol className="text-2xl my-2">
+                                <li>水こぼした。おわーたー。</li>
+                                <li>コメントには気持ちをコメント。</li>
+                                <li>子供めっちゃいるど。</li>
+                                <li>物を落とした落とした。</li>
+                                <li>その友達のことにははフレンドこう。</li>
+                                <li>喧嘩しちゃいけんか？？</li>
+                                <li>日本の海にじゃっぱーん。</li>
+                                <li>大義を果たすのがたいぎい。</li>
+                                <li>この会場はでかいじょう。</li>
+                                <li>泣く生々くらい(cry)悲しい。</li>
+                                <li>共産主義への協賛主義。</li>
+                                <li>退屈な体育。</li>
+                                <li>クレヨンくれよん。</li>
+                                <li>清浄な少女の賞状。</li>
+                                <li>慣行を敢行する。</li>
+                                <li>この映像とてもえいぞう。</li>
+                                <li>思い出は重いで...</li>
+                                <li>台湾にいきたいわん！</li>
+                            </ol>
+                    </main>
+                </div>
+                <div className="flex grow justify-center items-end h-fit mb-3">
+                    <Footer />
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default Portfolio;

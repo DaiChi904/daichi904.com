@@ -3,9 +3,9 @@
 import { useState, useRef } from "react"
 import Image from "next/image";
 import Link from "next/link";
-import Clock from "./components/clock";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Clock from "../components/clock";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Home () {
   const [changeAppStatus, setChangeAppStatus] = useState(false)
