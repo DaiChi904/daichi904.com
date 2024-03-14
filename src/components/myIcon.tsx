@@ -5,7 +5,7 @@ import Image from "next/image";
 function MyIcon() {
     return(
         <>
-            <Image className="rounded" src="/myIcon.PNG" width={256} height={256} alt="This is my icon" />
+            <Image className="rounded" src={"/public/myIcon.PNG"} width={256} height={256} alt="This is my icon" />
         </>
     );
 }
