@@ -6,6 +6,9 @@ body {
   /*background: radial-gradient(rgb(8, 36, 83) 10%, black 80%);*/
   background-color: rgb(50, 50, 50);
   color: aliceblue;
+
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 ol {

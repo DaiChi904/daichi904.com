@@ -15,7 +15,7 @@ function Profile() {
     return (
         <>
             {/* 全体の定義 */}
-            <div className="flex flex-col h-screen">
+            <div className="flex flex-col w-screen h-screen">
                 <div className="flex items-start">
                     <Header />
                 </div>

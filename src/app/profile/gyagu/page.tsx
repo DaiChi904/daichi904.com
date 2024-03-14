@@ -12,7 +12,7 @@ function Portfolio() {
 
     return(
         <>
-            <div className="flex flex-col w-full h-screen items-center">
+            <div className="flex flex-col w-screen h-screen items-center">
                 <div className="flex w-full items-start">
                     <Header />
                 </div>
@@ -40,6 +40,7 @@ function Portfolio() {
                                 <li>この映像とてもえいぞう。</li>
                                 <li>思い出は重いで...</li>
                                 <li>台湾にいきたいわん！</li>
+                                <li></li>
                             </ol>
                     </main>
                 </div>

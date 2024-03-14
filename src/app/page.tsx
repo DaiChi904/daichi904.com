@@ -14,11 +14,11 @@ function Home () {
   }, 500);
   return(
       <>
-        <div className="flex flex-col w-full h-screen items-center justify-between">
+        <div className="flex flex-col w-screen h-screen items-center justify-between">
           <div className="flex w-full">
             <Header />
           </div>
-          <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
+          <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out " : "transition-opacity duration-700 opacity-0 ease-in-out"}>
           <main>
             <h1 className="text-8xl flex items-center justify-center h-48 mt-24">DaiChi</h1>
             <div className="text-4xl flex items-center justify-center h-16">

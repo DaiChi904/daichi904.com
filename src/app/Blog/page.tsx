@@ -14,7 +14,7 @@ function Blog() {
 
     return(
         <>
-            <div className="flex flex-col w-full h-screen items-center">
+            <div className="flex flex-col w-screen h-screen items-center">
                 <div className="flex w-full items-start">
                     <Header />
                 </div>
