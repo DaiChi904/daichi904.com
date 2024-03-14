@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    export: "output",
-    basePath: process.env.GITHUB_ACTIONS && "/my-home-page",
-    trailingSlash: true,
+    basePath: "/my-home-page",
+    output: "export",
+    images: { unoptimized: true } ,
 };
 
 export default nextConfig;
