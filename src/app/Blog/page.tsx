@@ -14,8 +14,8 @@ function Blog() {
 
     return(
         <>
-            <div className="flex flex-col h-screen items-center">
-                <div className="flex items-start">
+            <div className="flex flex-col w-full h-screen items-center">
+                <div className="flex w-full items-start">
                     <Header />
                 </div>
                 <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
