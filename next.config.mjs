@@ -8,6 +8,7 @@ const isProd = process.env.NODE_ENV == "production"
 
 const nextConfig = {
     basePath: isProd ? SUB_DIRECTORY : "",
+    assetPrefix: isProd ? SUB_DIRECTORY : "",
     output: "export",
     images: { unoptimized: true } ,
 };
