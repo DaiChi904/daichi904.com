@@ -12,7 +12,7 @@ function Custom404() {
 
     return(
         <>
-            <div className="flex flex-col h-screen items-center">
+            <div className="flex flex-col w-screen h-screen items-center">
                 <div className="flex items-start">
                     <Header />
                 </div>
