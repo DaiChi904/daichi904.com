@@ -1,6 +1,4 @@
 /* 時間や曜日によって画像を変化させる機能を追加する */
-"use client"
-
 import Image from "next/image";
 
 
