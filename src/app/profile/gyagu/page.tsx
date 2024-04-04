@@ -41,6 +41,7 @@ function Portfolio() {
                                 <li>台湾にいきたいわん！</li>
                                 <li>エイリアンの歯めっちゃ鋭利やん。</li>
                                 <li>石が落ちた。ストーン！</li>
+                                <li>内科医にならにかい？</li>
                             </ol>
                     </main>
                 </div>
