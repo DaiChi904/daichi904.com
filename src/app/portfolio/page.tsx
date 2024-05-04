@@ -1,30 +1,13 @@
-"use client"
-import { useState } from "react";
-
-import Footer from "../../components/footer";
-import Header from "../../components/header";
+import BaseLayout from "@/layouts/BaseLayout";
 
 function Portfolio() {
-    const [changeAppStatus, setChangeAppStatus] = useState(false)
-    setTimeout(() => {
-    setChangeAppStatus(true);
-    }, 500); /* 2秒後にchangeAppStatusをtrueに変更 */
-
     return(
         <>
-            <div className="flex flex-col w-screen h-screen items-center">
-                <div className="flex w-full items-start">
-                    <Header />
-                </div>
-                <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out" : "transition-opacity duration-700 opacity-0 ease-in-out"}>
-                    <main className="flex grow justify-center items-center">
-                        <h1 className="text-4xl">んーこれからに期待（笑）</h1>
-                    </main>
-                </div>
-                <div className="flex grow justify-center items-end h-fit mb-3">
-                    <Footer />
-                </div>
-            </div>
+            <BaseLayout>
+                <main className="flex grow justify-center items-center">
+                    <h1 className="text-4xl">んーこれからに期待（笑）</h1>
+                </main>
+            </BaseLayout>
         </>
     );
 }

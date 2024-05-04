@@ -1,24 +1,11 @@
-"use client"
-
-import { useState, useRef } from "react"
-import Image from "next/image";
 import Link from "next/link";
 import Clock from "../components/clock";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import BaseLayout from "@/layouts/BaseLayout";
 
 function Home () {
-  const [changeAppStatus, setChangeAppStatus] = useState(false)
-  setTimeout(() => {
-    setChangeAppStatus(true);
-  }, 500);
-  return(
+  return (
       <>
-        <div className="flex flex-col w-screen h-screen items-center justify-between">
-          <div className="flex w-full">
-            <Header />
-          </div>
-          <div className={changeAppStatus ? "flex flex-col h-full transition-opacity duration-700 opacity-100 ease-in-out " : "transition-opacity duration-700 opacity-0 ease-in-out"}>
+        <BaseLayout>
           <main>
             <h1 className="text-8xl flex items-center justify-center h-48 mt-24">DaiChi</h1>
             <div className="text-4xl flex items-center justify-center h-16">
@@ -34,11 +21,7 @@ function Home () {
             </div>
             {/* ナビゲーションここまで */}
           </main>
-          </div>
-          <div className="flex grow justify-center items-end mb-3">
-            <Footer />
-          </div>
-        </div>  
+        </BaseLayout>
       </>
   );
 };
