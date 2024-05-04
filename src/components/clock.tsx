@@ -4,15 +4,25 @@
 import { useState, useEffect } from "react";
 
 /* 時計の基礎コンポーネント */
-function Clock() {
+function Clock({mode}: {mode: string}) {
     const [time, setTime] = useState("");
     useEffect(() => {
-        let currentTime = oneDay_timeUpdater();
-        setTime(currentTime); /* 1回目のレンダリング */
-        setInterval(() => {
-            currentTime = oneDay_timeUpdater();
+        if (mode === "nomal") {
+            let currentTime = timeUpdater_nomal();
+            setTime(currentTime); /* 1回目のレンダリング */
+            setInterval(() => {
+            currentTime = timeUpdater_nomal();
             setTime(currentTime);
         }, 1000);
+        } else {
+            let currentTime = timeUpdater_full();
+            setTime(currentTime); /* 1回目のレンダリング */
+            setInterval(() => {
+            currentTime = timeUpdater_full();
+            setTime(currentTime);
+        }, 1000);
+        }
+        
     }, []);
 
     return(
@@ -23,7 +33,7 @@ function Clock() {
 };
 
 /* 関数-年月日時間の全て */
-function full_timeUpdater() {
+function timeUpdater_full() {
     let time = new Date();
     let year = time.getFullYear();
     let month = time.getMonth() + 1;
@@ -38,7 +48,7 @@ function full_timeUpdater() {
 }
 
 /* 関数-時間のみ */
-function oneDay_timeUpdater() {
+function timeUpdater_nomal() {
     let time = new Date();
     let hour = time.getHours();
     let minite = time.getMinutes();

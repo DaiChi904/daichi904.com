@@ -9,7 +9,7 @@ function Home () {
           <main>
             <h1 className="text-8xl flex items-center justify-center h-48 mt-24">DaiChi</h1>
             <div className="text-4xl flex items-center justify-center h-16">
-              <Clock />
+              <Clock mode={"nomal"} />
             </div>
             {/* ナビゲーションここから */}
             <div className="flex h-32 justify-center items-center">
