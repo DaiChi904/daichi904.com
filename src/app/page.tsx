@@ -6,8 +6,8 @@ function Home () {
   return (
       <>
         <BaseLayout>
-          <main>
-            <h1 className="text-8xl flex items-center justify-center h-48 mt-24">DaiChi</h1>
+          <main className="flex flex-col grow items-center justify-center">
+            <h1 className="text-8xl flex items-center justify-center h-48">DaiChi</h1>
             <div className="text-4xl flex items-center justify-center h-16">
               <Clock mode={"nomal"} />
             </div>
