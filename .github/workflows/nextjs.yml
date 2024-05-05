@@ -48,6 +48,7 @@ jobs:
             echo "manager=pnpm" >> $GITHUB_OUTPUT
             echo "command=install --frozen-lockfile" >> $GITHUB_OUTPUT
             echo "runner=pnpm" >> $GITHUB_OUTPUT
+            npm install -g pnpm
             exit 0
           else
             echo "Unable to determine package manager"
