@@ -30,7 +30,7 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>もう用済み。TypeScropt使うべき。</p>
+                                <p>もう用済み。時代はTypeScropt。</p>
                                 <p>My Project</p>
                                 <ul>
                                     <li><Link href="https://github.com/GunmaRamens/js_practice/tree/main">・js_practice</Link></li>
@@ -50,6 +50,7 @@ function Portfolio() {
                                 <p>My Projects</p>
                                 <ul>
                                     <li><Link href="https://github.com/DaiChi904/calculator-app"></Link>・calculator-app</li>
+                                    <li><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
                                     <li>・このサイト</li>
                                 </ul>
                             </PORLowerItem>
@@ -89,6 +90,7 @@ function Portfolio() {
                                 <p>My Projects</p>
                                 <ul>
                                     <li><Link href="https://github.com/DaiChi904/calculator-app">・calculator-app</Link></li>
+                                    <li><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
                                     <li>・このサイト</li>
                                 </ul>
                             </PORLowerItem>
@@ -127,6 +129,7 @@ function Portfolio() {
                                 <p>My Project</p>
                                 <ul>
                                     <li><Link href="https://github.com/DaiChi904/calculator-app">・calculator-app</Link></li>
+                                    <li><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
                                 </ul>
                             </PORLowerItem>
                         </PORItemContainer>
