@@ -28,7 +28,7 @@ function Contact() {
                     </PORItemContainer>
                     
                     <PORItemContainer>
-                        <Link href="https://github.com/DaiChi904">
+                        <Link href="https://github.com/DaiChi904" className="hover:bg-purple-600 hover:opacity-95 hover:rounded-lg">
                             <PORUpperItem>
                                 <PORItemLogo>
                                     <FaGithub size={50}/>
