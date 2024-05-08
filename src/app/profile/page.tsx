@@ -12,10 +12,10 @@ function Profile() {
                     <div className="flex w-11/12">
                         <div className="flex flex-col justify-center">
                             {/* 上側の要素ここから */}
-                            <div className="flex flex-row">
+                            <div className="flex sm:flex-col md:flex-row">
                                 {/* 左側の要素ここから */}    
                                 <div className="flex flex-col my-3 border-2 rounded-lg">
-                                    <div className="w-max h-max">
+                                    <div className="min-w-60 w-fit h-fit">
                                         <MyIcon />
                                     </div>
                                     <table className="table-auto my-2">
