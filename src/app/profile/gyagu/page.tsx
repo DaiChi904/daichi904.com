@@ -6,9 +6,9 @@ function Portfolio() {
             <BaseLayout>
                 <main className="flex justify-center">
                     <div className="flex w-11/12 justify-center">
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl my-3">ギャグ一覧</h1>
-                            <ol className="text-2xl my-2">
+                        <div className="flex flex-col items-center">
+                            <h1 className="text-2xl l-sm:text-4xl my-3">ギャグ一覧</h1>
+                            <ol className="text-sm l-sm:text-2xl my-2">
                                 <li>水こぼした。おわーたー。</li>
                                 <li>コメントには気持ちをコメント。</li>
                                 <li>子供めっちゃいるど(child)。</li>
