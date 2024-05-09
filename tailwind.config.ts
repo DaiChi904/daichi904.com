@@ -23,19 +23,19 @@ const config: Config = {
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
       'l-2xl': {'min': '1535px'},
-      // => @media (max-width: 1535px) { ... }
+      // => @media (min-width: 1535px) { ... }
 
       'l-xl': {'min': '1279px'},
-      // => @media (max-width: 1279px) { ... }
+      // => @media (min-width: 1279px) { ... }
 
       'l-lg': {'min': '1023px'},
-      // => @media (max-width: 1023px) { ... }
+      // => @media (min-width: 1023px) { ... }
 
       'l-md': {'min': '767px'},
-      // => @media (max-width: 767px) { ... }
+      // => @media (min-width: 767px) { ... }
 
       'l-sm': {'min': '639px'},
-      // => @media (max-width: 639px) { ... }
+      // => @media (min-width: 639px) { ... }
     },
     extend: {
       backgroundImage: {

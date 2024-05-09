@@ -12,10 +12,10 @@ function Profile() {
                     <div className="flex w-11/12">
                         <div className="flex flex-col justify-center">
                             {/* 上側の要素ここから */}
-                            <div className="flex sm:flex-col md:flex-row">
+                            <div className="flex sm:flex-col l-md:flex-row items-center">
                                 {/* 左側の要素ここから */}    
-                                <div className="flex flex-col my-3 border-2 rounded-lg">
-                                    <div className="min-w-60 w-fit h-fit">
+                                <div className="flex flex-col my-3 border-2 rounded-lg max-w-68 items-center w-fit h-fit">
+                                    <div className="min-w-60">
                                         <MyIcon />
                                     </div>
                                     <table className="table-auto my-2">
@@ -64,7 +64,7 @@ function Profile() {
                                 {/* 右側の要素ここから */}
                                 <div className="flex justify-center items-center">
                                     <ul>
-                                        <li className="text-2xl border-zinc-100 border-y-4 mx-2 rounded text-center">
+                                        <li className="text-2xl border-zinc-100 border-y-4 mx-2 rounded text-center m-2">
                                             <Link className="block w-full h-full px-5 hover:bg-purple-600 hover:opacity-95" href="/profile/gyagu">ギャグ</Link>
                                         </li>
                                     </ul>
