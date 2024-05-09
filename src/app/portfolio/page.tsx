@@ -30,10 +30,9 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>My Project</p>
-                                <ul>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/GunmaRamens/js_practice/tree/main">・js_practice</Link></li>
-                                </ul>
+                                <ol>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/GunmaRamens/js_practice/tree/main">js_practice</Link></li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
@@ -46,12 +45,11 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>My Projects</p>
-                                <ul>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">・calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
-                                    <li>・このサイト</li>
-                                </ul>
+                                <ol>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                    <li>このサイト</li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
@@ -65,10 +63,6 @@ function Portfolio() {
                             </PORUpperItem>
                             <PORLowerItem>
                                 ちょっとだけ。
-                                <p>My Projects</p>
-                                <ul>
-                                    <li>特にない。大学の課題をするために少し活用したくらい。</li>
-                                </ul>
                             </PORLowerItem>
                         </PORItemContainer>
                     </PORItems>
@@ -85,13 +79,11 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>インターンでも使ってます。</p>
-                                <p>My Projects</p>
-                                <ul>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">・calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
-                                    <li>・このサイト</li>
-                                </ul>
+                                <ol>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                    <li>このサイト</li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                     </PORItems>
@@ -108,11 +100,9 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>インターンでも使ってます。</p>
-                                <p>My Project</p>
-                                <ul>
-                                    <li>・このサイト</li>
-                                </ul>
+                                <ol>
+                                    <li>このサイト</li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
@@ -125,11 +115,10 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>My Project</p>
-                                <ul>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">・calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">・smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
-                                </ul>
+                                <ol>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
+                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
@@ -142,10 +131,9 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>My Project</p>
-                                <ul>
-                                    <li>・このサイト</li>
-                                </ul>
+                                <ol>
+                                    <li>このサイト</li>
+                                </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
@@ -158,7 +146,7 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>インターンで少し。</p>
+                                少しだけ。
                             </PORLowerItem>
                         </PORItemContainer>
                     </PORItems>
