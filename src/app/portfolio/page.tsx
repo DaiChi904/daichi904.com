@@ -30,7 +30,6 @@ function Portfolio() {
                                 </PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
-                                <p>もう用済み。時代はTypeScropt。</p>
                                 <p>My Project</p>
                                 <ul>
                                     <li className="hover:text-purple-600"><Link href="https://github.com/GunmaRamens/js_practice/tree/main">・js_practice</Link></li>
