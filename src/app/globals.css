@@ -12,5 +12,6 @@ body {
 }
 
 ol {
+  margin-left: 20px;
   list-style: number;
 }
