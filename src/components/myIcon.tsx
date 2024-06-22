@@ -5,7 +5,7 @@ import { basePath } from "../../next.config.js";
 const BASE_PATH = basePath ? basePath : "";
 
 function MyIcon() {
-    return(
+    return (
         <>
             <Image className="rounded" src={BASE_PATH + "/myIcon.PNG"} width={312} height={312} alt="This is my icon" />
         </>

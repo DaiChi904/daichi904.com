@@ -1,23 +1,22 @@
+import Link from "next/link";
+import { FaPython, FaReact } from "react-icons/fa";
 import { IoFishOutline, IoLogoIonic, IoLogoJavascript } from "react-icons/io5";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiMui, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 import BaseLayout from "@/layouts/BaseLayout";
 import PORItemContainer from "@/portfolioItem/PORItemContainer";
 import PORItemLogo from "@/portfolioItem/PORItemLogo";
+import PORItems from "@/portfolioItem/PORItems";
 import PORItemTitle from "@/portfolioItem/PORItemTitle";
 import PORLowerItem from "@/portfolioItem/PORLowerItem";
 import PORUpperItem from "@/portfolioItem/PORUpperItem";
-import { FaPython, FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiNextdotjs, SiMui } from "react-icons/si";
-import PORItems from "@/portfolioItem/PORItems";
-import Link from "next/link";
-
 
 function Portfolio() {
-    return(
+    return (
         <>
             <BaseLayout>
-                <main className="flex flex-col justify-center items-center h-fit w-screen">
+                <main className="flex h-fit w-screen flex-col items-center justify-center">
                     {/* 言語ここから */}
                     <PORItems>
                         <PORItemContainer>
@@ -25,13 +24,13 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <IoLogoJavascript size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    JavaScript
-                                </PORItemTitle>
+                                <PORItemTitle>JavaScript</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/GunmaRamens/js_practice/tree/main">js_practice</Link></li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/GunmaRamens/js_practice/tree/main">js_practice</Link>
+                                    </li>
                                 </ol>
                             </PORLowerItem>
                         </PORItemContainer>
@@ -40,14 +39,18 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <SiTypescript size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    TypeScript
-                                </PORItemTitle>
+                                <PORItemTitle>TypeScript</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
+                                    </li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
+                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
+                                        </Link>
+                                    </li>
                                     <li>このサイト</li>
                                 </ol>
                             </PORLowerItem>
@@ -57,13 +60,9 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <FaPython size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    Python
-                                </PORItemTitle>
+                                <PORItemTitle>Python</PORItemTitle>
                             </PORUpperItem>
-                            <PORLowerItem>
-                                ちょっとだけ。
-                            </PORLowerItem>
+                            <PORLowerItem>ちょっとだけ。</PORLowerItem>
                         </PORItemContainer>
                     </PORItems>
                     {/* 言語ここまで */}
@@ -74,14 +73,18 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <FaReact size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    React
-                                </PORItemTitle>
+                                <PORItemTitle>React</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
+                                    </li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
+                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
+                                        </Link>
+                                    </li>
                                     <li>このサイト</li>
                                 </ol>
                             </PORLowerItem>
@@ -93,11 +96,9 @@ function Portfolio() {
                         <PORItemContainer>
                             <PORUpperItem>
                                 <PORItemLogo>
-                                <SiNextdotjs size={60} />
+                                    <SiNextdotjs size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    Next.js
-                                </PORItemTitle>
+                                <PORItemTitle>Next.js</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
@@ -110,25 +111,27 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <IoLogoIonic size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    Ionic Framework
-                                </PORItemTitle>
+                                <PORItemTitle>Ionic Framework</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link></li>
-                                    <li className="hover:text-purple-600"><Link href="https://github.com/DaiChi904/smart-task-manager">smart-task-manager( コードが汚すぎるのでいつか作り直す )</Link></li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
+                                    </li>
+                                    <li className="hover:text-purple-600">
+                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
+                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
+                                        </Link>
+                                    </li>
                                 </ol>
                             </PORLowerItem>
                         </PORItemContainer>
                         <PORItemContainer>
                             <PORUpperItem>
                                 <PORItemLogo>
-                                <RiTailwindCssFill size={60} />
+                                    <RiTailwindCssFill size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    TailWind CSS
-                                </PORItemTitle>
+                                <PORItemTitle>TailWind CSS</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <ol>
@@ -141,13 +144,9 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <SiMui size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    Material UI
-                                </PORItemTitle>
+                                <PORItemTitle>Material UI</PORItemTitle>
                             </PORUpperItem>
-                            <PORLowerItem>
-                                少しだけ。
-                            </PORLowerItem>
+                            <PORLowerItem>少しだけ。</PORLowerItem>
                         </PORItemContainer>
                     </PORItems>
                     {/* フレームワークここまで */}
@@ -158,9 +157,7 @@ function Portfolio() {
                                 <PORItemLogo>
                                     <IoFishOutline size={60} />
                                 </PORItemLogo>
-                                <PORItemTitle>
-                                    Filleting Fishes 
-                                </PORItemTitle>
+                                <PORItemTitle>Filleting Fishes</PORItemTitle>
                             </PORUpperItem>
                             <PORLowerItem>
                                 <p>魚捌けます！！！</p>

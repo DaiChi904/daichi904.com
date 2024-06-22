@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import MyIcon from "../../components/myIcon";
 import BaseLayout from "@/layouts/BaseLayout";
+
+import MyIcon from "../../components/myIcon";
 
 function Profile() {
     return (
@@ -12,13 +13,13 @@ function Profile() {
                     <div className="flex w-11/12">
                         <div className="flex flex-col justify-center">
                             {/* 上側の要素ここから */}
-                            <div className="flex sm:flex-col l-md:flex-row items-center">
-                                {/* 左側の要素ここから */}    
-                                <div className="flex flex-col my-3 border-2 rounded-lg max-w-68 items-center w-fit h-fit">
+                            <div className="flex items-center sm:flex-col l-md:flex-row">
+                                {/* 左側の要素ここから */}
+                                <div className="my-3 flex size-fit max-w-72 flex-col items-center rounded-lg border-2">
                                     <div className="min-w-60">
                                         <MyIcon />
                                     </div>
-                                    <table className="table-auto my-2">
+                                    <table className="my-2 table-auto">
                                         <thead>
                                             <tr>
                                                 <th>名前</th>
@@ -39,11 +40,17 @@ function Profile() {
                                 </div>
                                 {/* 左側の要素ここまで */}
                                 {/* 右側の要素ここから */}
-                                <div className="flex flex-col m-3">
+                                <div className="m-3 flex flex-col">
                                     <h1 className="text-3xl">ひとこと</h1>
-                                    <p className="text-lg">広島出身で、地方の国立大学に通うしがない大学生です。情報系の勉強をしています。</p>
-                                    <p className="text-lg">最近はプログラミングの勉強を始めて、今はReactとかNext.jsとかをこねこねしています。</p>
-                                    <p className="text-lg">趣味はゲームや音楽を聴くことで、最近は料理にはまっています。下に自分の好きな音楽をいくつか載せておきます。特に、「ただ、透明」は個人的に一番好きな歌です。是非聴いてみてください。</p>
+                                    <p className="text-lg">
+                                        広島出身で、地方の国立大学に通うしがない大学生です。情報系の勉強をしています。
+                                    </p>
+                                    <p className="text-lg">
+                                        最近はプログラミングの勉強を始めて、今はReactとかNext.jsとかをこねこねしています。
+                                    </p>
+                                    <p className="text-lg">
+                                        趣味はゲームや音楽を聴くことで、最近は料理にはまっています。下に自分の好きな音楽をいくつか載せておきます。特に、「ただ、透明」は個人的に一番好きな歌です。是非聴いてみてください。
+                                    </p>
 
                                     <ol className="m-5">
                                         <li>ユノギシロ - ただ、透明</li>
@@ -55,17 +62,20 @@ function Profile() {
                             </div>
                             {/* 上側の要素ここまで */}
                             {/* 下側の要素ここから */}
-                            <div className="flex flex-row justify-center items-center">
+                            <div className="flex flex-row items-center justify-center">
                                 {/* 左側の要素ここから */}
-                                <div className="flex justify-center items-center">
-
-                                </div>
+                                <div className="flex items-center justify-center"></div>
                                 {/* 左側の要素ここまで */}
                                 {/* 右側の要素ここから */}
-                                <div className="flex justify-center items-center">
+                                <div className="flex items-center justify-center">
                                     <ul>
-                                        <li className="text-2xl border-zinc-100 border-y-4 mx-2 rounded text-center m-2">
-                                            <Link className="block w-full h-full px-5 hover:bg-purple-600 hover:opacity-95" href="/profile/gyagu">ギャグ</Link>
+                                        <li className="m-2 rounded border-y-4 border-zinc-100 text-center text-2xl">
+                                            <Link
+                                                className="block size-full px-5 hover:bg-purple-600 hover:opacity-95"
+                                                href="/profile/gyagu"
+                                            >
+                                                ギャグ
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -79,6 +89,6 @@ function Profile() {
             </BaseLayout>
         </>
     );
-};
+}
 
 export default Profile;

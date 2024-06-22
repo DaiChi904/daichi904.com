@@ -1,10 +1,10 @@
 import BaseLayout from "@/layouts/BaseLayout";
 
 function Custom404() {
-    return(
+    return (
         <>
             <BaseLayout>
-                <main className="flex grow justify-center items-center">
+                <main className="flex grow items-center justify-center">
                     <h1 className="text-4xl">404 Error - 内容が無いようです...</h1>
                 </main>
             </BaseLayout>

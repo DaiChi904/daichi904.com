@@ -1,7 +1,3 @@
-export default function PORItemContainer({children}: Readonly<{children: React.ReactNode;}>) {
-    return (
-        <div className="flex flex-col border-2 rounded-lg sm:w-5/6 l-sm:w-5/12 m-1">
-            {children}
-        </div>
-    )
+export default function PORItemContainer({ children }: Readonly<{ children: React.ReactNode }>) {
+    return <div className="m-1 flex flex-col rounded-lg border-2 sm:w-5/6 l-sm:w-5/12">{children}</div>;
 }

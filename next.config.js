@@ -10,7 +10,7 @@ const nextConfig = {
     basePath: isProd ? SUB_DIRECTORY : "",
     assetPrefix: isProd ? SUB_DIRECTORY : "",
     output: isProd ? "export" : "standalone",
-    images: { unoptimized: true } ,
+    images: { unoptimized: true },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
