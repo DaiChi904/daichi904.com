@@ -1,173 +1,75 @@
-import Link from "next/link";
-import { FaPython, FaReact } from "react-icons/fa";
-import { IoFishOutline, IoLogoIonic, IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiMui, SiNextdotjs, SiTypescript } from "react-icons/si";
+"use client";
+
+import { useState } from "react";
 
 import BaseLayout from "@/layouts/BaseLayout";
-import PORItemContainer from "@/portfolioItem/PORItemContainer";
-import PORItemLogo from "@/portfolioItem/PORItemLogo";
-import PORItems from "@/portfolioItem/PORItems";
-import PORItemTitle from "@/portfolioItem/PORItemTitle";
-import PORLowerItem from "@/portfolioItem/PORLowerItem";
-import PORUpperItem from "@/portfolioItem/PORUpperItem";
+
+import Carrer from "./Carrer";
+import Experiense from "./Experiense";
+
+type TabType = "experience" | "carrer";
 
 function Portfolio() {
+    const [selectedTab, setSelectedTab] = useState<TabType>("carrer");
+
+    const [isChangeing, setIsChangeing] = useState(false);
+    const [isReady, setIsReady] = useState(true);
+
+    const handleChnageTab = (tab: TabType) => {
+        if (tab === selectedTab) return;
+        setIsReady(false);
+        setTimeout(() => {
+            setIsChangeing(true);
+            if (tab === "carrer") {
+                setSelectedTab("carrer");
+            } else {
+                setSelectedTab("experience");
+            }
+        }, 700);
+        setTimeout(() => {
+            setIsChangeing(false);
+            setIsReady(true);
+        }, 700);
+    };
+
     return (
-        <>
-            <BaseLayout>
-                <main className="flex h-fit w-screen flex-col items-center justify-center">
-                    {/* 言語ここから */}
-                    <PORItems>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <IoLogoJavascript size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>JavaScript</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/GunmaRamens/js_practice/tree/main">js_practice</Link>
-                                    </li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <SiTypescript size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>TypeScript</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
-                                    </li>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
-                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
-                                        </Link>
-                                    </li>
-                                    <li>このサイト</li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <FaPython size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>Python</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>ちょっとだけ。</PORLowerItem>
-                        </PORItemContainer>
-                    </PORItems>
-                    {/* 言語ここまで */}
-                    {/* ライブラリここから */}
-                    <PORItems>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <FaReact size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>React</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
-                                    </li>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
-                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
-                                        </Link>
-                                    </li>
-                                    <li>このサイト</li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                    </PORItems>
-                    {/* ライブラリここまで */}
-                    {/* フレームワークここから */}
-                    <PORItems>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <SiNextdotjs size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>Next.js</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li>このサイト</li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <IoLogoIonic size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>Ionic Framework</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/calculator-app">calculator-app</Link>
-                                    </li>
-                                    <li className="hover:text-purple-600">
-                                        <Link href="https://github.com/DaiChi904/smart-task-manager">
-                                            smart-task-manager( コードが汚すぎるのでいつか作り直す )
-                                        </Link>
-                                    </li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <RiTailwindCssFill size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>TailWind CSS</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <ol>
-                                    <li>このサイト</li>
-                                </ol>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <SiMui size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>Material UI</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>少しだけ。</PORLowerItem>
-                        </PORItemContainer>
-                    </PORItems>
-                    {/* フレームワークここまで */}
-                    {/* その他ここから */}
-                    <PORItems>
-                        <PORItemContainer>
-                            <PORUpperItem>
-                                <PORItemLogo>
-                                    <IoFishOutline size={60} />
-                                </PORItemLogo>
-                                <PORItemTitle>Filleting Fishes</PORItemTitle>
-                            </PORUpperItem>
-                            <PORLowerItem>
-                                <p>魚捌けます！！！</p>
-                            </PORLowerItem>
-                        </PORItemContainer>
-                    </PORItems>
-                    {/* その他ここまで */}
-                </main>
-            </BaseLayout>
-        </>
+        <BaseLayout>
+            <div className="m-2 flex w-full flex-row items-center justify-center">
+                <button
+                    className={
+                        selectedTab === "carrer"
+                            ? "flex h-full basis-1/2 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            : "flex h-full basis-1/2 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                    }
+                    onClick={() => handleChnageTab("carrer")}
+                >
+                    経歴
+                </button>
+                <button
+                    className={
+                        selectedTab === "experience"
+                            ? "flex h-full basis-1/2 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            : "flex h-full basis-1/2 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                    }
+                    onClick={() => handleChnageTab("experience")}
+                >
+                    経験
+                </button>
+            </div>
+            <main
+                className={
+                    !isChangeing && isReady
+                        ? "flex h-fit w-screen flex-col items-center justify-center opacity-100 transition-opacity duration-700 ease-in-out"
+                        : "flex h-fit w-screen flex-col items-center justify-center opacity-0 transition-opacity duration-700 ease-in-out"
+                }
+            >
+                {selectedTab === "carrer" && !isChangeing ? (
+                    <Carrer />
+                ) : selectedTab === "experience" && !isChangeing ? (
+                    <Experiense />
+                ) : null}
+            </main>
+        </BaseLayout>
     );
 }
 
