@@ -1,4 +1,4 @@
-import MyIcon from "@/MyIcon";
+import MyIcon from "./../../components/myIcon";
 
 export default function ProfileCard() {
     return (
