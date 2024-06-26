@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import BaseLayout from "@/layouts/BaseLayout";
 
-import Clock from "../components/Clock";
+import Clock from "../components/clock";
 
 function Home() {
     return (
