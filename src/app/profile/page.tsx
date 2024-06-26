@@ -2,92 +2,52 @@ import Link from "next/link";
 
 import BaseLayout from "@/layouts/BaseLayout";
 
-import MyIcon from "../../components/myIcon";
+import Introduction from "./Introduction";
+import ProfileCard from "./ProfileCard";
 
 function Profile() {
     return (
-        <>
-            <BaseLayout>
-                <main className="flex justify-center">
-                    {/* 全体の定義ここから */}
-                    <div className="flex w-11/12">
-                        <div className="flex flex-col justify-center">
-                            {/* 上側の要素ここから */}
-                            <div className="flex items-center sm:flex-col l-md:flex-row">
-                                {/* 左側の要素ここから */}
-                                <div className="my-3 flex size-fit max-w-72 flex-col items-center rounded-lg border-2">
-                                    <div className="min-w-60">
-                                        <MyIcon />
-                                    </div>
-                                    <table className="my-2 table-auto">
-                                        <thead>
-                                            <tr>
-                                                <th>名前</th>
-                                                <td>DaiChi ( DaiChi904 )</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>出身地</th>
-                                                <td>広島</td>
-                                            </tr>
-                                            <tr>
-                                                <th>生年月日</th>
-                                                <td>平成16年9月4日</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                {/* 左側の要素ここまで */}
-                                {/* 右側の要素ここから */}
-                                <div className="m-3 flex flex-col">
-                                    <h1 className="text-3xl">ひとこと</h1>
-                                    <p className="text-lg">
-                                        広島出身で、地方の国立大学に通うしがない大学生です。情報系の勉強をしています。
-                                    </p>
-                                    <p className="text-lg">
-                                        最近はプログラミングの勉強を始めて、今はReactとかNext.jsとかをこねこねしています。
-                                    </p>
-                                    <p className="text-lg">
-                                        趣味はゲームや音楽を聴くことで、最近は料理にはまっています。下に自分の好きな音楽をいくつか載せておきます。特に、「ただ、透明」は個人的に一番好きな歌です。是非聴いてみてください。
-                                    </p>
-
-                                    <ol className="m-5">
-                                        <li>ユノギシロ - ただ、透明</li>
-                                        <li>miwa - ヒカリへ</li>
-                                        <li>こはならむ - 10年後の私になら</li>
-                                    </ol>
-                                </div>
-                                {/* 右側の要素ここまで */}
-                            </div>
-                            {/* 上側の要素ここまで */}
-                            {/* 下側の要素ここから */}
-                            <div className="flex flex-row items-center justify-center">
-                                {/* 左側の要素ここから */}
-                                <div className="flex items-center justify-center"></div>
-                                {/* 左側の要素ここまで */}
-                                {/* 右側の要素ここから */}
-                                <div className="flex items-center justify-center">
-                                    <ul>
-                                        <li className="m-2 rounded border-y-4 border-zinc-100 text-center text-2xl">
-                                            <Link
-                                                className="block size-full px-5 hover:bg-purple-600 hover:opacity-95"
-                                                href="/profile/gyagu"
-                                            >
-                                                ギャグ
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                {/* 右側の要素ここまで */}
-                            </div>
-                            {/* 下側の要素ここまで */}
+        <BaseLayout>
+            <main className="flex justify-center">
+                {/* 全体の定義ここから */}
+                <div className="flex w-11/12">
+                    <div className="flex flex-col justify-center">
+                        {/* 上側の要素ここから */}
+                        <div className="flex items-center sm:flex-col l-md:flex-row">
+                            {/* 左側の要素ここから */}
+                            <ProfileCard />
+                            {/* 左側の要素ここまで */}
+                            {/* 右側の要素ここから */}
+                            <Introduction />
+                            {/* 右側の要素ここまで */}
                         </div>
+                        {/* 上側の要素ここまで */}
+                        {/* 下側の要素ここから */}
+                        <div className="flex flex-row items-center justify-center">
+                            {/* 左側の要素ここから */}
+                            <div className="flex items-center justify-center"></div>
+                            {/* 左側の要素ここまで */}
+                            {/* 右側の要素ここから */}
+                            <div className="flex items-center justify-center">
+                                <ul>
+                                    <li className="m-2 rounded border-y-4 border-zinc-100 text-center text-2xl">
+                                        <Link
+                                            className="block size-full px-5 hover:bg-purple-600 hover:opacity-95"
+                                            href="/profile/gyagu"
+                                        >
+                                            ギャグ
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* 右側の要素ここまで */}
+                        </div>
+                        {/* 下側の要素ここまで */}
                     </div>
-                    {/* 全体の定義ここまで */}
-                </main>
-            </BaseLayout>
-        </>
+                </div>
+                {/* 全体の定義ここまで */}
+            </main>
+        </BaseLayout>
     );
 }
 
