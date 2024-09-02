@@ -1,9 +1,9 @@
-function Footer() {
+import Typography from "../element/Typography";
+
+export default function Footer() {
     return (
         <div className="flex items-center justify-center">
-            <p className="text-zinc-100 sm:text-xs l-md:text-base">Copyright(C) 2024 DaiChi All Rights Reserved.</p>
+            <Typography>Copyright(C) 2024 DaiChi All Rights Reserved.</Typography>
         </div>
     );
 }
-
-export default Footer;

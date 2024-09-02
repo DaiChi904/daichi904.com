@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function Header() {
+export default function Header() {
     const path = usePathname();
     return (
         <div className="flex w-full flex-row flex-wrap items-center justify-center">
@@ -58,5 +58,3 @@ function Header() {
         </div>
     );
 }
-
-export default Header;

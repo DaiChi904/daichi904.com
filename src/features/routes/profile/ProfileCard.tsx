@@ -1,4 +1,4 @@
-import MyIcon from "@/MyIcon";
+import MyIcon from "@/features/common/MyIcon";
 
 export default function ProfileCard() {
     return (

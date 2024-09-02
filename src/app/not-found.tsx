@@ -1,13 +1,10 @@
-import BaseLayout from "@/layouts/BaseLayout";
+import BaseLayout from "@/components/layouts/BaseLayout";
+import NotFoundPageContent from "@/features/routes/not-found";
 
-function Custom404() {
+export default function Custom404() {
     return (
         <BaseLayout>
-            <main className="flex grow items-center justify-center">
-                <h1 className="text-4xl">404 Error - 内容が無いようです...</h1>
-            </main>
+            <NotFoundPageContent />
         </BaseLayout>
     );
 }
-
-export default Custom404;

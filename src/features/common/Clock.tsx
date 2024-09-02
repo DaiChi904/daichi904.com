@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from "react";
 
+import Typography from "@/components/element/Typography";
+
 /* 時計の基礎コンポーネント */
 function Clock({ mode }: { mode: "nomal" | "full" }) {
     const [time, setTime] = useState("");
@@ -13,7 +15,11 @@ function Clock({ mode }: { mode: "nomal" | "full" }) {
         }, 1000);
     }, []);
 
-    return <div className="transition-opacity duration-1000">{time}</div>;
+    return (
+        <div className="transition-opacity duration-1000">
+            <Typography size="medium">{time}</Typography>
+        </div>
+    );
 }
 
 function getTime(mode: "nomal" | "full") {
