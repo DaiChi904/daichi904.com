@@ -15,7 +15,7 @@ export default function Experiense() {
     return (
         <>
             <Typography size="mediumPlus">経験</Typography>
-            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns={2} gridRows={2}>
+            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns="grid-cols-2" gridRows="grid-rows-2">
                 <Item
                     icon={<IoLogoJavascript size={iconSize} />}
                     itemTitle="JavaScript"
@@ -41,7 +41,7 @@ export default function Experiense() {
                     itemContent={<Typography>大学の講義や課題で少しだけ。</Typography>}
                 />
             </GridContainer>
-            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns={2} gridRows={1}>
+            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns="grid-cols-2" gridRows="grid-rows-1">
                 <Item
                     icon={<FaReact size={iconSize} />}
                     itemTitle="React"
@@ -57,7 +57,7 @@ export default function Experiense() {
                     }
                 />
             </GridContainer>
-            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns={2} gridRows={2}>
+            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns="grid-cols-2" gridRows="grid-rows-2">
                 <Item
                     icon={<SiNextdotjs size={iconSize} />}
                     itemTitle="Next.js"
@@ -108,7 +108,7 @@ export default function Experiense() {
                     }
                 />
             </GridContainer>
-            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns={2} gridRows={1}>
+            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns="grid-cols-2" gridRows="grid-rows-1">
                 <Item
                     icon={<IoFishOutline size={iconSize} />}
                     itemTitle="Filleting Fishes"

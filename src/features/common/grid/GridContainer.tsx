@@ -6,8 +6,8 @@ interface Props {
     margin?: string;
     padding?: string;
     gap?: string;
-    gridColumns: number;
-    gridRows: number;
+    gridColumns: string;
+    gridRows: string;
     justifyContent?: Position;
     justifyItems?: Position;
     alignContent?: Position;
@@ -17,7 +17,7 @@ interface Props {
 }
 
 /**
- * margin, padding and gap are need to passed as tailwind's value.
+ * margin, padding, gap, gridColumns and gridRows are need to passed as tailwind's value.
  */
 export default function GridContainer({
     margin,
@@ -32,8 +32,6 @@ export default function GridContainer({
     grow,
     children,
 }: Props) {
-    const _gridColumns = `grid-cols-${gridColumns}`;
-    const _gridRows = `grid-rows-${gridRows}`;
     const _justifyContent =
         justifyContent === "start"
             ? "justify-start"
@@ -54,11 +52,8 @@ export default function GridContainer({
               : alignContent === "end" && "content-end";
     const _alignItems =
         alignItems === "start" ? "items-start" : alignItems === "center" ? "items-center" : alignItems === "end" && "items-end";
-    return (
-        <div
-            className={`grid size-full ${grow || (grow === undefined && "grow")} ${margin} ${padding} ${gap} ${_gridColumns} ${_gridRows} ${_justifyContent} ${_justifyItems} ${_alignContent} ${_alignItems}`}
-        >
-            {children}
-        </div>
-    );
+
+    const appliedStyle = `grid size-full grid-cols- ${grow || (grow === undefined && grow)} ${margin} ${padding} ${gap} ${gridColumns} ${gridRows} ${_justifyContent} ${_justifyItems} ${_alignContent} ${_alignItems}`;
+
+    return <div className={appliedStyle}>{children}</div>;
 }
