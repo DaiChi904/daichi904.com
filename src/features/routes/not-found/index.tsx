@@ -1,4 +1,4 @@
-import Typography from "@/components/element/Typography"
+import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
 
 export default function NotFoundPageContent() {

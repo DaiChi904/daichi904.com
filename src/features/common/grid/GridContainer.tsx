@@ -56,7 +56,7 @@ export default function GridContainer({
         alignItems === "start" ? "items-start" : alignItems === "center" ? "items-center" : alignItems === "end" && "items-end";
     return (
         <div
-            className={`grid size-full ${ grow || grow === undefined && "grow" } ${margin} ${padding} ${gap} ${_gridColumns} ${_gridRows} ${_justifyContent} ${_justifyItems} ${_alignContent} ${_alignItems}`}
+            className={`grid size-full ${grow || (grow === undefined && "grow")} ${margin} ${padding} ${gap} ${_gridColumns} ${_gridRows} ${_justifyContent} ${_justifyItems} ${_alignContent} ${_alignItems}`}
         >
             {children}
         </div>
