@@ -29,7 +29,9 @@ export default function Experiense() {
                             <li className="hover:text-purple-600">
                                 <Link href="https://github.com/DaiChi904/todo-app">todo-app</Link>
                             </li>
-                            <li>このサイト</li>
+                            <li className="hover:text-purple-600">
+                                <Link href="https://daichi904.github.io/daichi904.com/portfolio">daichi904.com</Link>
+                            </li>
                         </ol>
                     }
                 />
@@ -48,7 +50,9 @@ export default function Experiense() {
                             <li className="hover:text-purple-600">
                                 <Link href="https://github.com/DaiChi904/todo-app">todo-app</Link>
                             </li>
-                            <li>このサイト</li>
+                            <li className="hover:text-purple-600">
+                                <Link href="https://daichi904.github.io/daichi904.com/portfolio">daichi904.com</Link>
+                            </li>
                         </ol>
                     }
                 />
@@ -62,7 +66,9 @@ export default function Experiense() {
                             <li className="hover:text-purple-600">
                                 <Link href="https://github.com/DaiChi904/todo-app">todo-app</Link>
                             </li>
-                            <li>このサイト</li>
+                            <li className="hover:text-purple-600">
+                                <Link href="https://daichi904.github.io/daichi904.com/portfolio">daichi904.com</Link>
+                            </li>
                         </ol>
                     }
                 />
@@ -74,7 +80,9 @@ export default function Experiense() {
                             <li className="hover:text-purple-600">
                                 <Link href="https://github.com/DaiChi904/todo-app">todo-app</Link>
                             </li>
-                            <li>このサイト</li>
+                            <li className="hover:text-purple-600">
+                                <Link href="https://daichi904.github.io/daichi904.com/portfolio">daichi904.com</Link>
+                            </li>
                         </ol>
                     }
                 />

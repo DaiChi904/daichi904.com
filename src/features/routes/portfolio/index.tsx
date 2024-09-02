@@ -38,8 +38,8 @@ export default function PortfolioPageContent() {
                 <button
                     className={
                         selectedTab === "carrer"
-                            ? "flex h-full basis-1/2 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
-                            : "flex h-full basis-1/2 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            ? "flex h-full basis-1/3 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            : "flex h-full basis-1/3 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
                     }
                     onClick={() => handleChnageTab("carrer")}
                 >
@@ -48,15 +48,15 @@ export default function PortfolioPageContent() {
                 <button
                     className={
                         selectedTab === "experience"
-                            ? "flex h-full basis-1/2 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
-                            : "flex h-full basis-1/2 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            ? "flex h-full basis-1/3 items-center justify-center rounded border-2 bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
+                            : "flex h-full basis-1/3 items-center justify-center rounded border-2 hover:bg-purple-600 hover:opacity-95 md:mx-0.5 md:px-0.5 l-md:mx-1 l-md:px-1"
                     }
                     onClick={() => handleChnageTab("experience")}
                 >
                     経験
                 </button>
             </div>
-            <main
+            <div
                 className={
                     !isChangeing && isReady
                         ? "flex h-fit w-screen flex-col items-center justify-center opacity-100 transition-opacity duration-700 ease-in-out"
@@ -68,7 +68,7 @@ export default function PortfolioPageContent() {
                 ) : selectedTab === "experience" && !isChangeing ? (
                     <Experiense />
                 ) : null}
-            </main>
+            </div>
         </Container>
     );
 }
