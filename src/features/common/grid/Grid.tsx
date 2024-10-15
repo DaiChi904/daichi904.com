@@ -6,6 +6,6 @@ interface Props {
 }
 
 export default function Grid({ className, children }: Props) {
-    const appledStyle = `grid ${className}`;
-    return <div className={appledStyle}>{children}</div>;
+    const appliedStyle = `grid ${className}`;
+    return <div className={appliedStyle}>{children}</div>;
 }
