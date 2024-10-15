@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
-import GridContainer from "@/features/common/grid/GridContainer";
+import { GridContainer } from "@/features/common/grid";
 
 import Item from "../../common/Item";
 
@@ -13,7 +13,13 @@ const iconSize = 80;
 export default function ContactPageContent() {
     return (
         <Container justifyContent="center">
-            <GridContainer padding="py-5 px-10" gap="gap-x-10 gap-y-6" gridColumns="grid-cols-1" gridRows="grid-rows-2" grow={false}>
+            <GridContainer
+                padding="py-5 px-10"
+                gap="gap-x-10 gap-y-6"
+                gridColumns="grid-cols-1"
+                gridRows="grid-rows-2"
+                grow={false}
+            >
                 <Item
                     icon={<BiLogoGmail size={iconSize} />}
                     itemTitle="Gmail"
