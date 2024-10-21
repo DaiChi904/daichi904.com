@@ -1,0 +1,10 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "editor.detectIndentation": true,
+}
