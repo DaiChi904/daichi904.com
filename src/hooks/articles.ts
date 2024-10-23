@@ -7,6 +7,7 @@ export const useArticles = () => {
     const [tags, setTags] = useState<string[]>([]);
     const [abstracts, setAbstracts] = useState<Abstract[]>([]);
     const [articles, setArticles] = useState<Article[]>([]);
+    const [article, setArticle] = useState<Article | null>(null);
 
     const getTags = async () => {
         // eslint-disable-next-line prettier/prettier
@@ -35,12 +36,21 @@ export const useArticles = () => {
         setArticles(data || []);
     };
 
+    const getArticleById = async (id: string) => {
+        // eslint-disable-next-line prettier/prettier
+        const { data, error } = await supabase.from('Articles').select('*').match({id: id}).single();
+        if (error) throw error;
+        setArticle(data || null);
+    };
+
     return {
         tags,
         abstracts,
         articles,
+        article,
         getTags,
         getAbstracts,
         getArticles,
+        getArticleById,
     };
 };
