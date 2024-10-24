@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
-import { GridContainer } from "@/features/common/grid";
+import { GridContainer } from "@/components/element/grid";
 
 import Item from "../../common/Item";
 

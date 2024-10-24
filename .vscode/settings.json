@@ -6,5 +6,5 @@
     "editor.tabSize": 4,
     "files.insertFinalNewline": true,
     "files.eol": "\n",
-    "editor.detectIndentation": true,
+    "editor.detectIndentation": true
 }

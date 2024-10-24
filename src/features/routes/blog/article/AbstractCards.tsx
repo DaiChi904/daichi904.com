@@ -1,14 +1,14 @@
-import { GridContainer } from "@/features/common/grid";
+import GridV2 from "@/components/element/gridV2/GridV2";
 import { Abstract } from "@/types/article.types";
 
 import AbstractCrad from "./AbstractCard";
 
 export default function AbstractCards({ abstracts }: { abstracts: Abstract[] }) {
     return (
-        <GridContainer gridRows="grid-rows-4" gridColumns="grid-cols-4" padding="px-10" gap="gap-10">
+        <GridV2 container xSize={4} ySize={2} className="gap-10 px-10">
             {abstracts.map((abstract) => (
                 <AbstractCrad key={abstract.id} abstract={abstract} />
             ))}
-        </GridContainer>
+        </GridV2>
     );
 }

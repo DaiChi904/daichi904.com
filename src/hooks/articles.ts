@@ -11,7 +11,7 @@ export const useArticles = () => {
 
     const getTags = async () => {
         // eslint-disable-next-line prettier/prettier
-        const { data, error } = await supabase.from('Articles').select('tags');
+        const { data, error } = await supabase.from("Articles").select("tags");
         if (error) throw error;
         const parsedTags: string[] = [];
         data.map((tagObjects) =>
@@ -24,21 +24,21 @@ export const useArticles = () => {
 
     const getAbstracts = async () => {
         // eslint-disable-next-line prettier/prettier
-        const { data, error } = await supabase.from('Articles').select('id, tags, createdAt, editedAt, title');
+        const { data, error } = await supabase.from("Articles").select("id, tags, createdAt, editedAt, title");
         if (error) throw error;
         setAbstracts(data);
     };
 
     const getArticles = async () => {
         // eslint-disable-next-line prettier/prettier
-        const { data, error } = await supabase.from('Articles').select('*');
+        const { data, error } = await supabase.from("Articles").select("*");
         if (error) throw error;
         setArticles(data || []);
     };
 
     const getArticleById = async (id: string) => {
         // eslint-disable-next-line prettier/prettier
-        const { data, error } = await supabase.from('Articles').select('*').match({id: id}).single();
+        const { data, error } = await supabase.from("Articles").select("*").match({ id: id }).single();
         if (error) throw error;
         setArticle(data || null);
     };

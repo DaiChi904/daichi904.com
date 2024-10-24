@@ -5,7 +5,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiMui, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 import Typography from "@/components/element/Typography";
-import { GridContainer } from "@/features/common/grid";
+import { GridContainer } from "@/components/element/grid";
 
 import Item from "../../common/Item";
 
