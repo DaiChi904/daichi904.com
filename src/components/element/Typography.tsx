@@ -1,35 +1,19 @@
 import { ReactNode } from "react";
 
+import { dynamicTextSize, TextSize } from "@/style/dynamicPrams/typography/dynamicTextSize";
+import { dynamicTextAlign } from "@/style/dynamicPrams/typography/dynamicTextAlign";
+
 interface Props {
-    size?: "small" | "medium" | "mediumPlus" | "large" | "largePlus";
+    size?: TextSize;
     textAlign?: "start" | "center" | "end";
-    textColor?: string;
-    margin?: string;
-    padding?: string;
+    className?: string;
     children: ReactNode;
 }
 
 /**
  * textColor, margin and padding are need to passed as tailwind's value.
  */
-export default function Typography({ size, textAlign, textColor, margin, padding, children }: Props) {
-    const textSize =
-        size === "small"
-            ? "text-xs"
-            : size === "medium"
-              ? "text-2xl"
-              : size === "mediumPlus"
-                ? "text-4xl"
-                : size === "large"
-                  ? "text-6xl"
-                  : size === "largePlus"
-                    ? "text-8xl"
-                    : "text-base";
-    const _textAlign =
-        textAlign === "start" ? "text-start" : textAlign === "center" ? "text-center" : textAlign === "end" ? "text-end" : "";
-    const _textcolor = !textColor ? "text-zinc-100" : textColor;
-    const _margin = margin ? margin : "";
-    const _padding = padding ? padding : "";
-    const appliedStyle = `${textSize} ${_textAlign} ${_textcolor} ${_margin} ${_padding}`;
+export default function Typography({ size, textAlign, className, children }: Props) {
+    const appliedStyle = `${dynamicTextSize[`${size ? size : "default"}`]} ${dynamicTextAlign[`${textAlign ? textAlign : "start"}`]} ${className}`;
     return <p className={appliedStyle}>{children}</p>;
 }
