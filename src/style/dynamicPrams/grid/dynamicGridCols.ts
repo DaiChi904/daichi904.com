@@ -1,4 +1,4 @@
-export const dynamicGridCols: { [key: number]: string } = {
+export const dynamicGridCols: { [key: string]: string } = {
     1: "grid-cols-1",
     2: "grid-cols-2",
     3: "grid-cols-3",

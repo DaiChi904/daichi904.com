@@ -5,7 +5,7 @@ import AbstractCrad from "./AbstractCard";
 
 export default function AbstractCards({ abstracts }: { abstracts: Abstract[] }) {
     return (
-        <GridV2 container xSize={4} ySize={2} className="gap-10 px-10">
+        <GridV2 container xSize={2} ySize={3} className="gap-10 px-10">
             {abstracts.map((abstract) => (
                 <AbstractCrad key={abstract.id} abstract={abstract} />
             ))}

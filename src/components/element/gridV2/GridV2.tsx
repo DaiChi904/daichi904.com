@@ -14,8 +14,8 @@ interface Props {
 }
 
 export default function GridContainer({ xSize, ySize, container, className, children }: Props) {
-    const horizonalSize = container ? `${dynamicGridRows[xSize]}` : `${dynamicRowSpan[xSize]}`;
-    const verticalSize = container ? `${dynamicGridCols[ySize]}` : `${dynamicColSpan[ySize]}`;
+    const horizonalSize = container ? `${dynamicGridCols[xSize]}` : `${dynamicColSpan[xSize]}`;
+    const verticalSize = container ? `${dynamicGridRows[ySize]}` : `${dynamicRowSpan[ySize]}`;
 
     const appliedStyle = `grid ${container && "grow"} ${horizonalSize} ${verticalSize} ${className}`;
 

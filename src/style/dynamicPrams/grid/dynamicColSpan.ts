@@ -1,4 +1,4 @@
-export const dynamicColSpan: { [key: number]: string } = {
+export const dynamicColSpan: { [key: string]: string } = {
     1: "col-span-1",
     2: "col-span-2",
     3: "col-span-3",
