@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { ReactNode } from "react";
 
 import { dynamicColSpan } from "@/style/dynamicPrams/grid/dynamicColSpan";
