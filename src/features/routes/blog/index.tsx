@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Container from "@/components/layouts/Container";
 import { useArticles } from "@/hooks/articles";
 
-import AbstractCards from "./article/AbstractCards";
+import AbstractCards from "./articleList";
 
 export default function BlogPageContent() {
     const { articles, getArticles, tags, getTags, abstracts, getAbstracts } = useArticles();

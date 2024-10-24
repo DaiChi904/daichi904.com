@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import Typography from "@/components/element/Typography";
 import BaseLayout from "@/components/layouts/BaseLayout";
+import ArticlePageContent from "@/features/routes/blog/articlePage";
 import { useArticles } from "@/hooks/articles";
 
 export default function Article({ params }: { params: { slug: string } }) {
@@ -19,8 +20,7 @@ export default function Article({ params }: { params: { slug: string } }) {
         );
     return (
         <BaseLayout>
-            {article.title}
-            {article.content}
+            <ArticlePageContent article={article} />
         </BaseLayout>
     );
 }

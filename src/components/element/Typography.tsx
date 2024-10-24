@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import { dynamicTextSize, TextSize } from "@/style/dynamicPrams/typography/dynamicTextSize";
 import { dynamicTextAlign } from "@/style/dynamicPrams/typography/dynamicTextAlign";
+import { dynamicTextSize, TextSize } from "@/style/dynamicPrams/typography/dynamicTextSize";
 
 interface Props {
     size?: TextSize;

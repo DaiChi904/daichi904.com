@@ -2,9 +2,9 @@ import Link from "next/link";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 
+import { GridContainer } from "@/components/element/grid";
 import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
-import { GridContainer } from "@/components/element/grid";
 
 import Item from "../../common/Item";
 
