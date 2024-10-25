@@ -1,9 +1,6 @@
 import { ReactNode } from "react";
 
-import { dynamicColSpan } from "@/style/dynamicPrams/grid/dynamicColSpan";
-import { dynamicGridCols } from "@/style/dynamicPrams/grid/dynamicGridCols";
-import { dynamicGridRows } from "@/style/dynamicPrams/grid/dynamicGridRows";
-import { dynamicRowSpan } from "@/style/dynamicPrams/grid/dynamicRowSpan";
+import { dynamicColSpan, dynamicGridCols, dynamicGridRows, dynamicRowSpan } from "@/style/dynamicPrams/grid";
 
 interface Props {
     xSize: number;

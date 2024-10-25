@@ -5,6 +5,6 @@ export const dynamicTextSize: { [key: string]: string } = {
     default: "text-base",
     medium: "text-2xl",
     mediumPlus: "text-4xl",
-    large: "text-8xl",
+    large: "text-6xl",
     largePlus: "text-8xl",
 };
