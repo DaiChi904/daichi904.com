@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
-import { dynamicTextAlign, dynamicTextSize, TextAlign, TextSize } from "@/style/dynamicPrams/typography";
+type TextSize = "small" | "default" | "medium" | "mediumPlus" | "large" | "largePlus";
+type TextAlign = "start" | "center" | "end";
 
 interface Props {
     size?: TextSize;
@@ -13,3 +14,18 @@ export default function Typography({ size, textAlign, className, children }: Pro
     const appliedStyle = `${dynamicTextSize[`${size ? size : "default"}`]} ${dynamicTextAlign[`${textAlign ? textAlign : "start"}`]} ${className}`;
     return <p className={appliedStyle}>{children}</p>;
 }
+
+const dynamicTextSize: { [key: string]: string } = {
+    small: "text-xs",
+    default: "text-base",
+    medium: "text-2xl",
+    mediumPlus: "text-4xl",
+    large: "text-6xl",
+    largePlus: "text-8xl",
+};
+
+const dynamicTextAlign: { [key: string]: string } = {
+    start: "text-start",
+    center: "text-center",
+    end: "text-end",
+};
