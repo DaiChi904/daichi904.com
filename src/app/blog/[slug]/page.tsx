@@ -4,15 +4,16 @@ import { useEffect } from "react";
 
 import Typography from "@/components/element/Typography";
 import BaseLayout from "@/components/layouts/BaseLayout";
-import ArticlePageContent from "@/features/routes/blog/articlePage";
-import { useArticles } from "@/hooks/articles";
+import ArticlePageContent from "@/features/routes/blog/blogPage";
+import { useMicroCMS } from "@/hooks/microCMS";
 
 export default function Article({ params }: { params: { slug: string } }) {
-    const { article, getArticleById } = useArticles();
+    const { blog, getBlog } = useMicroCMS();
     useEffect(() => {
-        getArticleById(params.slug);
+        getBlog(params.slug);
     }, []);
-    if (!article)
+    console.log(blog);
+    if (!blog)
         return (
             <BaseLayout>
                 <Typography>Failed to fetch article.</Typography>
@@ -20,7 +21,7 @@ export default function Article({ params }: { params: { slug: string } }) {
         );
     return (
         <BaseLayout>
-            <ArticlePageContent article={article} />
+            <ArticlePageContent blog={blog} />
         </BaseLayout>
     );
 }

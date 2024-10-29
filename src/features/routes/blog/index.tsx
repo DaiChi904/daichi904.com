@@ -2,22 +2,21 @@
 
 import { useEffect } from "react";
 
+import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
-import { useArticles } from "@/hooks/articles";
+import { useMicroCMS } from "@/hooks/microCMS";
 
-import AbstractCards from "./articleList";
+import BlogList from "./blogList";
 
-export default function BlogPageContent() {
-    const { articles, getArticles, tags, getTags, abstracts, getAbstracts } = useArticles();
+export default function BlogHomePageContent() {
+    const { blogAbstracts, getBlogAbstracts } = useMicroCMS();
     useEffect(() => {
-        getArticles();
-        getTags();
-        getAbstracts();
+        getBlogAbstracts();
     }, []);
-    console.log(articles, tags, abstracts);
+    console.log(blogAbstracts);
     return (
         <Container justifyContent="center" alignItems="center">
-            <AbstractCards abstracts={abstracts} />
+            {blogAbstracts ? <BlogList abstracts={blogAbstracts} /> : <Typography>Failed to fetch blogs</Typography>}
         </Container>
     );
 }
