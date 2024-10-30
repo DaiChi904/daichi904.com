@@ -4,8 +4,10 @@ import { BlogAbstract } from "@/types/blog.types";
 import AbstractCrad from "./AbstractCard";
 
 export default function BlogList({ abstracts }: { abstracts: BlogAbstract[] }) {
+    const rowSize = 4;
+    const columnSize = (abstracts.length % rowSize) + 1; // Important! Do not change this value.
     return (
-        <GridV2 container xSize={3} ySize={3} className="gap-10 px-10">
+        <GridV2 container xSize={rowSize} ySize={columnSize} className="gap-10 px-10">
             {abstracts.map((abstract) => (
                 <AbstractCrad key={abstract.id} abstract={abstract} />
             ))}
