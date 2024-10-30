@@ -4,7 +4,7 @@ import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
 import { Blog } from "@/types/blog.types";
 
-import BlogRender from "../BlogRender";
+import BlogRender from "./BlogRender";
 
 export default function BlogPageContent({ blog }: { blog: Blog }) {
     return (
