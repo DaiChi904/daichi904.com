@@ -1,44 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import GridV2 from "@/components/element/gridV2/GridV2";
 import Typography from "@/components/element/Typography";
-import Container from "@/components/layouts/Container";
 import { BlogAbstract } from "@/types/blog.types";
+import getFormattedDateString from "@/utils/getFormattedDateString";
 
-import { basePath } from "./../../../../../next.config.js";
-const BASE_PATH = basePath ? basePath : "";
+import BlogTags from "./BlogTags";
+import Sumnail from "./Sumnail";
 
 export default function AbstractCrad({ abstract }: { abstract: BlogAbstract }) {
     return (
-        <Link href={`/blog/${abstract.id}`} className="block">
-            <GridV2 container xSize={1} ySize={5} className="rounded-sm border-2 p-1">
-                {abstract.sumnail ? (
-                    <GridV2 xSize={1} ySize={3}>
-                        <Image
-                            src={abstract.sumnail.url}
-                            width={abstract.sumnail.width}
-                            height={abstract.sumnail.height}
-                            alt={"samnail"}
-                            className="flex size-fit"
-                        />
-                    </GridV2>
-                ) : (
-                    <GridV2 xSize={1} ySize={3}>
-                        <Image
-                            src={BASE_PATH + "/NoImage.jpg"}
-                            width={160}
-                            height={90}
-                            alt={"samnail"}
-                            className="flex size-fit"
-                        />
-                    </GridV2>
-                )}
-                <GridV2 xSize={1} ySize={2}>
-                    <Container>
-                        <Typography>{abstract.title}</Typography>
-                        <Typography>{abstract.createdAt}</Typography>
-                    </Container>
+        <Link href={`/blog/${abstract.id}`} className="rounded-md border-2 p-1">
+            <GridV2 container xSize={1} ySize={1}>
+                <Sumnail abstract={abstract} />
+                <BlogTags abstract={abstract} />
+                <Typography size="medium">{abstract.title}</Typography>
+                <GridV2 container xSize={2} ySize={1}>
+                    <Typography size="small">{getFormattedDateString(abstract.createdAt)}</Typography>
+                    <Typography size="small" textAlign="end">
+                        Read more
+                    </Typography>
                 </GridV2>
             </GridV2>
         </Link>

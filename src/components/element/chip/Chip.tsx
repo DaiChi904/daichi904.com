@@ -7,8 +7,8 @@ interface Props {
 
 export default function Chip({ label, className }: Props) {
     return (
-        <div className={`block w-fit rounded-xl border-black/90 bg-white ${className}`}>
-            <Typography size="small" textAlign="center" className={`${className} px-1.5 py-0.5 text-black`}>
+        <div className={`block w-fit rounded-md border-black/90 bg-white/25 ${className}`}>
+            <Typography size="small" textAlign="center" className={`${className} px-1.5 py-0.5 text-white`}>
                 {label}
             </Typography>
         </div>

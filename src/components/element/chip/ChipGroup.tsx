@@ -3,5 +3,5 @@ export default function ChipGroup({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <div className="flex flex-row">{children}</div>;
+    return <div className="flex size-min flex-row">{children}</div>;
 }
