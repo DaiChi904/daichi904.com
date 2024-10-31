@@ -13,7 +13,7 @@
 }
 
 .post {
-    &>h1 {
+    & > h1 {
         font-size: 30px;
         font-weight: bold;
         margin: 40px 0 20px;
@@ -21,18 +21,18 @@
         border-radius: 5px;
     }
 
-    &>h2 {
+    & > h2 {
         font-size: 24px;
         font-weight: bold;
         margin: 40px 0 16px;
     }
 
-    &>p {
+    & > p {
         line-height: 1.8;
         letter-spacing: 0.2px;
     }
 
-    &>ol {
+    & > ol {
         list-style-type: decimal;
         list-style-position: inside;
     }
