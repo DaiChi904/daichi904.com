@@ -12,7 +12,7 @@ export default function GridV2({ xSize, ySize, container, className, children }:
     const horizonalSize = container ? `${dynamicGridCols[xSize]}` : `${dynamicColSpan[xSize]}`;
     const verticalSize = container ? `${dynamicGridRows[ySize]}` : `${dynamicRowSpan[ySize]}`;
 
-    const appliedStyle = `grid ${container && "grow"} ${horizonalSize} ${verticalSize} ${className}`;
+    const appliedStyle = `grid ${horizonalSize} ${verticalSize} ${className}`;
 
     return <div className={appliedStyle}>{children}</div>;
 }
