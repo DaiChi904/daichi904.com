@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Blog, BlogAbstract } from "@/types/blog.types";
+import { Blog, BlogAbstract, BlogAbstractsResponse, BlogResponse } from "@/types/blog.types";
 
 import { microCMSClient } from "../../libs/client";
 
@@ -17,7 +17,7 @@ export const useMicroCMS = () => {
     const [blog, setBlog] = useState<Blog>();
 
     const getBlogAbstracts = async () => {
-        const response = await microCMSClient.get({
+        const response: BlogAbstractsResponse = await microCMSClient.get({
             endpoint: "blogs",
             queries: { fields: "id,createdAt,updatedAt,publishedAt,revisedAt,sumnail,tags,title" },
         });
@@ -25,7 +25,7 @@ export const useMicroCMS = () => {
     };
 
     const getBlog = async (id: string) => {
-        const response = await microCMSClient.get({ endpoint: "blogs", queries: { ids: id } });
+        const response: BlogResponse = await microCMSClient.get({ endpoint: "blogs", queries: { ids: id } });
         setBlog(response.contents[0]);
     };
 
