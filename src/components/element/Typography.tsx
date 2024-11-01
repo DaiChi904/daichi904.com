@@ -1,35 +1,31 @@
 import { ReactNode } from "react";
 
+type TextSize = "small" | "default" | "medium" | "mediumPlus" | "large" | "largePlus";
+type TextAlign = "start" | "center" | "end";
+
 interface Props {
-    size?: "small" | "medium" | "mediumPlus" | "large" | "largePlus";
-    textAlign?: "start" | "center" | "end";
-    textColor?: string;
-    margin?: string;
-    padding?: string;
+    size?: TextSize;
+    textAlign?: TextAlign;
+    className?: string;
     children: ReactNode;
 }
 
-/**
- * textColor, margin and padding are need to passed as tailwind's value.
- */
-export default function Typography({ size, textAlign, textColor, margin, padding, children }: Props) {
-    const textSize =
-        size === "small"
-            ? "text-xs"
-            : size === "medium"
-              ? "text-2xl"
-              : size === "mediumPlus"
-                ? "text-4xl"
-                : size === "large"
-                  ? "text-6xl"
-                  : size === "largePlus"
-                    ? "text-8xl"
-                    : "text-base";
-    const _textAlign =
-        textAlign === "start" ? "text-start" : textAlign === "center" ? "text-center" : textAlign === "end" ? "text-end" : "";
-    const _textcolor = !textColor ? "text-zinc-100" : textColor;
-    const _margin = margin ? margin : "";
-    const _padding = padding ? padding : "";
-    const appliedStyle = `${textSize} ${_textAlign} ${_textcolor} ${_margin} ${_padding}`;
+export default function Typography({ size, textAlign, className, children }: Props) {
+    const appliedStyle = `${dynamicTextSize[`${size ? size : "default"}`]} ${dynamicTextAlign[`${textAlign ? textAlign : "start"}`]} ${className}`;
     return <p className={appliedStyle}>{children}</p>;
 }
+
+const dynamicTextSize: { [key: string]: string } = {
+    small: "text-xs",
+    default: "text-base",
+    medium: "text-2xl",
+    mediumPlus: "text-4xl",
+    large: "text-6xl",
+    largePlus: "text-8xl",
+};
+
+const dynamicTextAlign: { [key: string]: string } = {
+    start: "text-start",
+    center: "text-center",
+    end: "text-end",
+};

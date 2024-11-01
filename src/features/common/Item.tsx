@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
 import Typography from "@/components/element/Typography";
-import Grid from "@/features/common/grid/Grid";
+
+import { Grid } from "../../components/element/grid";
 
 interface Props {
     icon: JSX.Element;

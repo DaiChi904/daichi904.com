@@ -1,10 +1,22 @@
+"use client";
+
+import { useEffect } from "react";
+
 import Typography from "@/components/element/Typography";
 import Container from "@/components/layouts/Container";
+import { useMicroCMS } from "@/hooks/microCMS";
 
-export default function BlogPageContent() {
+import BlogList from "./blogList";
+
+export default function BlogHomePageContent() {
+    const { blogAbstracts, getBlogAbstracts } = useMicroCMS();
+    useEffect(() => {
+        getBlogAbstracts();
+    }, []);
+    console.log(blogAbstracts);
     return (
         <Container justifyContent="center" alignItems="center">
-            <Typography size="mediumPlus">いつか書こうと思っています。</Typography>
+            {blogAbstracts ? <BlogList abstracts={blogAbstracts} /> : <Typography>Failed to fetch blogs</Typography>}
         </Container>
     );
 }

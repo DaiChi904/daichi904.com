@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header";
 
 export default function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     const [isReloaded, setIsReloaded] = useState(false);
@@ -12,9 +12,7 @@ export default function BaseLayout({ children }: Readonly<{ children: React.Reac
     }, 500);
     return (
         <div className="flex max-h-full min-h-screen w-screen flex-col justify-between">
-            <div className="mt-2 flex w-full items-center justify-center border-b-2 border-dashed pb-2">
-                <Header />
-            </div>
+            <Header />
             <div
                 className={
                     isReloaded

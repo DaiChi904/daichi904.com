@@ -8,9 +8,7 @@ import Clock from "../../common/Clock";
 export default function HomePageContent() {
     return (
         <Container alignItems="center" justifyContent="center">
-            <Typography size="large" margin="my-2">
-                DaiChi
-            </Typography>
+            <Typography size="large">DaiChi</Typography>
 
             <Clock mode={"nomal"} />
 

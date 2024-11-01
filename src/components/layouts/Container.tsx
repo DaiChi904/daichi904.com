@@ -13,13 +13,33 @@ interface Props {
 export default function Container({ justifyContent, justifyItems, alignContent, alignItems, children }: Props) {
     return (
         <main
-            className={`flex grow flex-col
-                ${justifyContent === "start" ? "justify-start" : justifyContent === "center" ? "justify-center" : justifyContent === "end" && "justify-end"}
-                ${justifyItems === "start" ? "justify-items-start" : justifyItems === "center" ? "justify-items-center" : justifyItems === "end" && "justify-items-end"}
-                ${alignContent === "start" ? "content-start" : alignContent === "center" ? "content-center" : alignContent === "end" && "content-end"}
-                ${alignItems === "start" ? "items-start" : alignItems === "center" ? "items-center" : alignItems === "end" && "items-end"}`}
+            className={`flex grow flex-col ${dynamicJustifyContent[`${justifyContent ? justifyContent : "start"}`]} ${dynamicJustifyItems[`${justifyItems ? justifyItems : "start"}`]} ${dynamicAlignContent[`${alignContent ? alignContent : "start"}`]} ${dynamicAlignItems[`${alignItems ? alignItems : "start"}`]}`}
         >
             {children}
         </main>
     );
 }
+
+const dynamicJustifyContent: { [key: string]: string } = {
+    start: "justify-start",
+    center: "justify-center",
+    end: "justify-end",
+};
+
+const dynamicJustifyItems: { [key: string]: string } = {
+    start: "justify-items-start",
+    center: "justify-items-center",
+    end: "justify-items-end",
+};
+
+const dynamicAlignContent: { [key: string]: string } = {
+    start: "content-start",
+    center: "content-center",
+    end: "content-end",
+};
+
+const dynamicAlignItems: { [key: string]: string } = {
+    start: "items-start",
+    center: "items-center",
+    end: "items-end",
+};
