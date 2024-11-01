@@ -1,4 +1,4 @@
-import Typography from "../element/Typography";
+import Typography from "../../../element/Typography";
 
 export default function Footer() {
     return (

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import Header from "./header";
 
 export default function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {

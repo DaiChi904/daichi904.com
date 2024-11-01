@@ -1,4 +1,4 @@
-import BaseLayout from "@/components/layouts/BaseLayout";
+import { BaseLayout } from "@/components/layouts";
 import PortfolioPageContent from "@/features/routes/portfolio";
 
 export default function Portfolio() {

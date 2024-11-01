@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-import Typography from "@/components/element/Typography";
-
-import Container from "../../../components/layouts/Container";
-import Clock from "../../common/Clock";
+import { Typography } from "@/components/element";
+import { Container } from "@/components/layouts";
+import { Clock } from "@/features/common";
 
 export default function HomePageContent() {
     return (

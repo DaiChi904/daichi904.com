@@ -1,4 +1,5 @@
-import BaseLayout from "../components/layouts/BaseLayout";
+import { BaseLayout } from "@/components/layouts";
+
 import HomePageContent from "../features/routes/home";
 
 export default function Home() {

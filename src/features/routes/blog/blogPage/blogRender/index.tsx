@@ -1,5 +1,4 @@
-import Chip from "@/components/element/chip/Chip";
-import ChipGroup from "@/components/element/chip/ChipGroup";
+import { Chip, ChipGroup } from "@/components/element";
 import styles from "@/styles/blogPage.module.scss";
 import { Blog } from "@/types/blog.types";
 
