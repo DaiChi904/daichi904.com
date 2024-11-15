@@ -9,7 +9,7 @@ import PortfolioTabProvider from "./PortfolioTabProvider";
 export default function PortfolioPageContent() {
     return (
         <PortfolioTabProvider>
-            <Container justifyContent="center" justifyItems="center">
+            <Container>
                 <PortfolioMenuButtons />
                 <PortfolioContentsRender />
             </Container>
