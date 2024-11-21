@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type TextSize = "small" | "default" | "medium" | "mediumPlus" | "large" | "largePlus";
+type TextSize = "small" | "default" | "defaultPlus" | "medium" | "mediumPlus" | "large" | "largePlus";
 type TextAlign = "start" | "center" | "end";
 
 interface Props {
@@ -18,6 +18,7 @@ export default function Typography({ size, textAlign, className, children }: Pro
 const dynamicTextSize: { [key: string]: string } = {
     small: "text-xs",
     default: "text-base",
+    defaultPlus: "text-xl",
     medium: "text-2xl",
     mediumPlus: "text-4xl",
     large: "text-6xl",

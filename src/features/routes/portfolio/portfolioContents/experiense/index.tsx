@@ -4,10 +4,10 @@ import { IoFishOutline, IoLogoIonic, IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiMui, SiNextdotjs, SiTypescript } from "react-icons/si";
 
-import Typography from "@/components/element/Typography";
 import { GridContainer } from "@/components/element/grid";
+import Typography from "@/components/element/Typography";
 
-import Item from "../../common/Item";
+import Item from "../../../../common/Item";
 
 const iconSize = 60;
 

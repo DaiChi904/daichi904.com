@@ -1,4 +1,4 @@
-import BaseLayout from "@/components/layouts/BaseLayout";
+import { BaseLayout } from "@/components/layouts";
 import ProfilePageContent from "@/features/routes/profile";
 
 function Profile() {

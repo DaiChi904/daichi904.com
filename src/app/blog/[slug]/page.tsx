@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-import Typography from "@/components/element/Typography";
-import BaseLayout from "@/components/layouts/BaseLayout";
+import { Typography } from "@/components/element";
+import { BaseLayout } from "@/components/layouts";
 import ArticlePageContent from "@/features/routes/blog/blogPage";
 import { useMicroCMS } from "@/hooks/microCMS";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname } from "next/navigation";
 
 import GridV2 from "@/components/element/gridV2/GridV2";

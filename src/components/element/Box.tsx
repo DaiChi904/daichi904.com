@@ -6,5 +6,5 @@ interface Props {
 }
 
 export default function Box({ className, children }: Props) {
-    return <div className={className}>{children}</div>;
+    return <div className={"box-border " + className}>{children}</div>;
 }

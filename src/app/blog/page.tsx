@@ -1,4 +1,4 @@
-import BaseLayout from "@/components/layouts/BaseLayout";
+import { BaseLayout } from "@/components/layouts";
 import BlogHomePageContent from "@/features/routes/blog";
 
 export default function Blog() {
