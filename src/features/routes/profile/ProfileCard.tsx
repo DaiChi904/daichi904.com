@@ -1,11 +1,12 @@
+import { Box } from "@/components/element";
 import MyIcon from "@/features/common/MyIcon";
 
 export default function ProfileCard() {
     return (
-        <div className="my-3 flex size-fit max-w-72 flex-col items-center rounded-lg border-2">
-            <div className="min-w-60">
+        <Box className="my-3 flex size-fit max-w-72 flex-col items-center rounded-lg border-2">
+            <Box className="min-w-60">
                 <MyIcon />
-            </div>
+            </Box>
             <table className="my-2 table-auto">
                 <thead>
                     <tr>
@@ -24,6 +25,6 @@ export default function ProfileCard() {
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </Box>
     );
 }
