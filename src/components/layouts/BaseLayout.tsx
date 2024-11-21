@@ -1,8 +1,6 @@
 import { Box } from "@/components/element";
 
-import ContentsWithAnimation from "./contentsWithAnimation";
-import Footer from "./footer";
-import Header from "./header";
+import { ContentsWithAnimation, Footer, Header } from "./layoutComponents";
 
 export default function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
